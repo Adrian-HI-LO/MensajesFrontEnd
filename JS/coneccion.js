@@ -8,7 +8,7 @@ document.getElementById('FRM_Reg').addEventListener('submit', function (event) {
     let validarContrasenia = contraseña.split('')
 
     if (validarUusario.length > 0 && validarContrasenia.length > 7) {
-        fetch('http://localhost:3000/registro', {
+        fetch('https://mensajesbackend.onrender.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ document.getElementById('FRM_INDEX').addEventListener('submit', function(event) 
     const usuario = document.getElementById('Usuario').value;
     const contrasenia = document.getElementById('Contrasenia').value;
 
-    fetch('http://localhost:3000/login', {
+    fetch('https://mensajesbackend.onrender.com', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const usuario = urlParams.get('usuario');
     document.getElementById('saludo').innerText = `Hola ${usuario}`;
 
-    fetch('http://localhost:3000/usuarios')
+    fetch('https://mensajesbackend.onrender.com')
         .then(response => response.json())
         .then(data => {
             const receptoresSelect = document.getElementById('receptores');
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const mensaje = document.getElementById('mensaje').value;
         const receptor = document.getElementById('receptores').value;
 
-        fetch('http://localhost:3000/enviarMensaje', {
+        fetch('https://mensajesbackend.onrender.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    fetch(`http://localhost:3000/mensajes/${usuario}`)
+    fetch(`https://mensajesbackend.onrender.com`)
         .then(response => response.json())
         .then(data => {
             const mensajesDiv = document.getElementById('mensajesRecibidos');
