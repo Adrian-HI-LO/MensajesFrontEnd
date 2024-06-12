@@ -1,13 +1,13 @@
 const staticPage = "dev-user-site-v1";
 const assets = [
      "/",
-     "index.html",
-     "registro.html",
-     "chat.html",
-     "aIndex.js",
-     "aRegistrarse.js",
-     "chat.js",
-     "coneccion.js"
+     "/index.html",
+     "/registro.html",
+     "/chat.html",
+     "/aIndex.js",
+     "/aRegistrarse.js",
+     "/chat.js",
+     "/coneccion.js"
 ]
 self.addEventListener("install", (installEvent) => {
      installEvent.waitUntil(
