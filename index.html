@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="apple-touch-icon" href="ios/72.png">
+     <link rel="manifest" href="manifest.json">
+     <meta name="apple-mobile-web-app-status-bar" content="#db4938">
+     <meta name="theme-color" content="#db4938">
+     <title>Mensajeria</title>
+     <link rel="stylesheet" href="./CSS/index.css">
+</head>
+
+<body>
+     <div class="DB">
+          <h1>Bienvenido</h1>
+          <form id="FRM_INDEX">
+               <h2>Iniciar sesion</h2>
+               <div class="DA">
+                    <label class="LA">Ingresa tu nombre de usuario </label>
+                    <input type="text" id="Usuario" required>
+                    <label class="LA">Ingresa tu contraseña</label>
+                    <input type="password" id="Contrasenia" required>
+               </div>
+
+               <div class="DC">
+                    <input type="submit" value="Aceptar">
+                    <input type="reset" value="Limpiar">
+               </div>
+          </form>
+          <div class="Registro">
+               <p>No cuentas con un usuario, registrate:</p>
+               <form id="FRM_Reg">
+                    <input type="submit" value="Registrarse">
+               </form>
+          </div>
+     </div>
+
+     <!-- Este script simplemente me dirige a otra pagina html -->
+     <script src="./JS/aRegistrarse.js"></script>
+
+     <!-- Este scriptes el de la coneccion con el servidor -->
+     <script src="./JS/coneccion.js"></script> 
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./CSS/registro.css">
+     <title>Document</title>
+</head>
+
+<body>
+     <div class="DA">
+          <h1>REGISTRO</h1>
+          <form id="FRM_Reg">
+               <div class="DB">
+                    <label class="LB">Ingresa un Nombre de Usuario</label>
+                    <input type="text" required>
+                    <label class="LB">Ingresa una contraseña</label>
+                    <p>(La constraseña debe ser de minimo 8 caracteres)</p>
+                    <input type="password">
+               </div>
+               <div class="DC">
+                    <input type="submit" value="Aceptar">
+                    <input type="reset" value="Limpiar">
+               </div>
+          </form>
+          <div class="DD">
+               <form id="FRM_Regreso">
+                    <input type="submit" value="Regresar al Inicio">
+               </form>
+          </div>
+     </div>
+          <!-- Este script simplemente me dirige a otra pagina html -->
+     <script src="./JS/aIndex.js"></script>
+
+          <!-- Este scriptes el de la coneccion con el servidor -->
+     <script src="./JS/coneccion.js"></script>
+</body>
+</html>
