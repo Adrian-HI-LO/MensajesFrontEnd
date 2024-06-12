@@ -23,7 +23,6 @@ document.getElementById('FRM_Reg').addEventListener('submit', function (event) {
                 console.error('Error:', error);
             });
     }else {
-        alert ( 'Los Datos ingresados no son validos' )
     }
 });
 
