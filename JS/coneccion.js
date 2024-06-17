@@ -23,11 +23,12 @@ document.getElementById('FRM_Reg').addEventListener('submit', function (event) {
                 console.error('Error:', error);
             });
     }else {
+        alert ( 'Contraseña corta' )
     }
 });
 
 document.getElementById('FRM_INDEX').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita el envío del formulario por defecto
+    event.preventDefault(); 
 
     const usuario = document.getElementById('Usuario').value;
     const contrasenia = document.getElementById('Contrasenia').value;
@@ -37,7 +38,7 @@ document.getElementById('FRM_INDEX').addEventListener('submit', function(event) 
         headers: {
             'Content-Type': 'application/json'
         },
-        // Aqui las llaves deben estar como en la base de datos
+        // LLaves del objeto como la BD
         body: JSON.stringify({
             nombreUsuario: usuario,
             contraseña: contrasenia

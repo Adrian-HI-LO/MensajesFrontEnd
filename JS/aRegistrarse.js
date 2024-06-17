@@ -1,4 +1,4 @@
-const FRM = document.getElementById( 'FRM_Reg' )
+const FRM = document.getElementById( 'FRM_Regil' )
 
 FRM.addEventListener ( 'submit', redireccionar )
 
