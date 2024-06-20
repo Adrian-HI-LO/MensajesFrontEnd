@@ -1,5 +1,5 @@
 // const staticPage = "dev-user-site-v1";
-const CACHE_NAME = 'mensajeria-cache-v1';
+const CACHE_NAME = 'TESJIchat-cache-v1';
 const urlsToCache = [
      "/",
      "index.html",
@@ -14,41 +14,41 @@ const urlsToCache = [
 ]
 
 
-self.addEventListener('install', function(event) {
-     event.waitUntil(
-       caches.open(CACHE_NAME)
-         .then(function(cache) {
-           return cache.addAll(urlsToCache);
-         })
-     );
-   });
-   
-   self.addEventListener('fetch', function(event) {
-     event.respondWith(
-       caches.match(event.request)
-         .then(function(response) {
-           if (response) {
-             return response;
-           }
-           return fetch(event.request);
-         })
-     );
-   });
-   
-   self.addEventListener('activate', function(event) {
-     var cacheWhitelist = [CACHE_NAME];
-     event.waitUntil(
-       caches.keys().then(function(cacheNames) {
-         return Promise.all(
-           cacheNames.map(function(cacheName) {
-             if (cacheWhitelist.indexOf(cacheName) === -1) {
-               return caches.delete(cacheName);
-             }
-           })
-         );
-       })
-     );
-   });
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => {
+        return cache.addAll(urlsToCache);
+      })
+  );
+});
+
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request)
+      .then(response => {
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      })
+  );
+});
+
+self.addEventListener('activate', event => {
+  const cacheWhitelist = [CACHE_NAME];
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
 /* self.addEventListener("install", (installEvent) => {
      installEvent.waitUntil(
           caches.open(staticPage).then((cache) =>{
