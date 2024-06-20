@@ -1,10 +1,10 @@
 // const staticPage = "dev-user-site-v1";
-const staticPage = 'TESJIchat-cache-v1';
-const assets = [
+const CACHE_NAME = 'TESJIchat-cache-v1';
+const urlsToCache = [
      "/",
-     "/index.html",
-     "/registro.html",
-     "/chat.html",
+     "index.html",
+     "registro.html",
+     "chat.html",
      "/JS/aIndex.js",
      "/JS/aRegistrarse.js",
      "/JS/chat.js",
@@ -14,7 +14,7 @@ const assets = [
 ]
 
 
-/* self.addEventListener('install', event => {
+self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
@@ -48,8 +48,8 @@ self.addEventListener('activate', event => {
       );
     })
   );
-}); */
-self.addEventListener("install", (installEvent) => {
+});
+/* self.addEventListener("install", (installEvent) => {
      installEvent.waitUntil(
           caches.open(staticPage).then((cache) =>{
                cache.addAll(assets);
@@ -61,7 +61,7 @@ self.addEventListener("fetch", (fetchEvent) =>{
           caches.match(fetchEvent.request).then(response => response || fetch(fetchEvent.request))
      )
 })
-
+ */
 
 
 // if ("serviceWorker" in navegator){
@@ -69,7 +69,7 @@ self.addEventListener("fetch", (fetchEvent) =>{
 //           navigator.serviceWorker.register("/serviceWorker.js").then(res => console.log("serviceWorker resgistrado"))
 //      })
 // }
-/* if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
      window.addEventListener('load', function() {
        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
          console.log('ServiceWorker registrado con éxito:', registration.scope);
@@ -77,9 +77,4 @@ self.addEventListener("fetch", (fetchEvent) =>{
          console.log('Fallo al registrar el ServiceWorker:', error);
        });
      });
-   } */
-     if ( "serviceWorker" in navigator ) {
-      window.addEventListener ( "load", (  ) => {
-           navigator.serviceWorker.register ( "/serviceWorker.js" ).then ( response => console.log ( "serviceWorker registrado" ) ).catch ( err => console.log ( "serviceWorker no registrado" ) )
-      } )
- }
+   }
