@@ -2,9 +2,9 @@
 const staticPage = 'TESJIchat-cache-v1';
 const assets = [
      "/",
-     "index.html",
-     "registro.html",
-     "chat.html",
+     "/index.html",
+     "/registro.html",
+     "/chat.html",
      "/JS/aIndex.js",
      "/JS/aRegistrarse.js",
      "/JS/chat.js",
