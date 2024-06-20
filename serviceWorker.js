@@ -1,6 +1,6 @@
 // const staticPage = "dev-user-site-v1";
-const CACHE_NAME = 'TESJIchat-cache-v1';
-const urlsToCache = [
+const staticPage = 'TESJIchat-cache-v1';
+const assets = [
      "/",
      "index.html",
      "registro.html",
@@ -14,7 +14,7 @@ const urlsToCache = [
 ]
 
 
-self.addEventListener('install', event => {
+/* self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
@@ -48,8 +48,8 @@ self.addEventListener('activate', event => {
       );
     })
   );
-});
-/* self.addEventListener("install", (installEvent) => {
+}); */
+self.addEventListener("install", (installEvent) => {
      installEvent.waitUntil(
           caches.open(staticPage).then((cache) =>{
                cache.addAll(assets);
@@ -60,7 +60,7 @@ self.addEventListener("fetch", (fetchEvent) =>{
      fetchEvent.respondWith(
           caches.match(fetchEvent.request).then(response => response || fetch(fetchEvent.request))
      )
-}) */
+})
 
 
 
