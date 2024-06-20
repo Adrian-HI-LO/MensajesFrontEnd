@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="./CSS/msj.css">
     <title>Registro</title>
 </head>
 <body>
@@ -11,18 +11,20 @@
         <h2 id="saludo"></h2>
         <div>
             <label for="mensaje">Escribe tu mensaje:</label>
-            <input type="text" id="mensaje">
+            <textarea  id="mensaje" rows="1" placeholder="Escribe algo..." required></textarea>
+            <!-- <input type="text" id="mensaje"> -->
             <label for="receptores">Enviar a:</label>
             <select id="receptores"></select>
             <button id="enviar">Enviar</button>
         </div>
         <h3>Mensajes recibidos</h3>
         <div id="mensajesRecibidos"></div>
+        <form id="FRM_CHATaIn">
+            <input type="submit" value="Regresar al Inicio">
+        </form>
     </div>
 
-    <form id="FRM_CHATaIn">
-        <input type="submit" value="Regresar al Inicio">
-    </form>
+
     <script src="./JS/chat.js"></script>
     <script src="./JS/aIndeChat.js"></script>
 </body>

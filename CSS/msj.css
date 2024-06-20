@@ -1,0 +1,84 @@
+body {
+     background-color: rgb(255, 245, 245);
+     text-align: center;
+     align-items: center;
+     margin: 0;
+     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.DB {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 550px;
+     background-color: #fff;
+     border-radius: 10px;
+     border-right: 1px solid #ff0000;
+     border-top: 1px solid #00ff2a;
+     border-left: 1px solid #ff8800;
+     border-bottom: 1px solid #0703ff79;
+     padding: 5px;
+}
+
+h2 {
+     margin-top: 5px;
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+     font-weight: 100;
+     letter-spacing: 2px;
+     padding-bottom: 15px;
+     border-bottom: 2px solid #d4d2d2;
+}
+
+label {
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     width: 100%;
+     font-weight: 800;
+     letter-spacing: 2px;
+}
+
+#mensaje, select {
+     background-color: transparent;
+     margin-left: 20px;
+     text-align: center;
+     margin-top: 10px;
+     margin-bottom: 30px;
+     width: 90%;
+     padding: 5px 10px;
+     /* box-sizing: border-box; */
+
+     border-right: 1px solid #4d0404;
+     border-bottom: 1px solid #4d0404;
+     border-top: transparent;
+     border-left: transparent;
+     letter-spacing: 2px;
+}
+
+button, #FRM_CHATaIn input {
+     margin-left: 15px;
+     width: 90%;
+     letter-spacing: 3px;
+     font-weight: 700;
+     padding: 7px;
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+     color: #01490d;
+     background-color: #ebe2e2;
+     border-radius: 10px;
+}
+button:hover, #FRM_CHATaIn input:hover {
+     margin-left: 15px;
+     width: 90%;
+     letter-spacing: 2px;
+     font-weight: 700;
+     padding: 7px;
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+     color: #01490d;
+     background-color: #fff;
+     border-radius: 10px;
+     border-right: 2px solid #ff0000;
+     border-top: 2px solid #00ff2a;
+     border-left: 2px solid #ff8800;
+     border-bottom: 2px solid #0703ff79;
+}
+
+
