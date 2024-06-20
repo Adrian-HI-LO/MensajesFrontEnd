@@ -69,7 +69,7 @@ self.addEventListener("fetch", (fetchEvent) =>{
 //           navigator.serviceWorker.register("/serviceWorker.js").then(res => console.log("serviceWorker resgistrado"))
 //      })
 // }
-if ('serviceWorker' in navigator) {
+/* if ('serviceWorker' in navigator) {
      window.addEventListener('load', function() {
        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
          console.log('ServiceWorker registrado con éxito:', registration.scope);
@@ -77,4 +77,9 @@ if ('serviceWorker' in navigator) {
          console.log('Fallo al registrar el ServiceWorker:', error);
        });
      });
-   }
+   } */
+     if ( "serviceWorker" in navigator ) {
+      window.addEventListener ( "load", (  ) => {
+           navigator.serviceWorker.register ( "/serviceWorker.js" ).then ( response => console.log ( "serviceWorker registrado" ) ).catch ( err => console.log ( "serviceWorker no registrado" ) )
+      } )
+ }
