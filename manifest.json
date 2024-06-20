@@ -1,11 +1,16 @@
 {
      "name": "App Chat",
-     "short_name": "Chat_Adrian_Daniel",
+     "short_name": "TESJIchat",
      "start_url": "index.html",
      "display": "standalone",
      "background_color": "#fdfdfd",
      "orientation": "portrait-primary",
      "icons": [
+          {
+            "src":"ios/MSJ.png",
+            "type":"image.png",
+            "sizes": "89x89"
+          },
           {
             "src": "windows11/SmallTile.scale-100.png",
             "type": "image.png",
