@@ -1,6 +1,6 @@
 // const staticPage = "dev-user-site-v1";
 const CACHE_NAME = 'mensajeria-cache-v1';
-const assets = [
+const urlsToCache = [
      "/",
      "index.html",
      "registro.html",
